@@ -19,4 +19,4 @@ task:
     - /Users/admin/perl5/bin/cpanm --installdeps .
     - perl Makefile.PL
     - make
-    - make test
+    - make test TEST_VERBOSE=1

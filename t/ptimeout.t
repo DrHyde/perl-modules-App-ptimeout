@@ -3,6 +3,7 @@ use warnings;
 
 use Capture::Tiny qw(capture);
 use Config;
+use Test::Differences;
 use Test::More;
 
 my @perl = (
@@ -25,7 +26,7 @@ my($stdout, $stderr, $status) = capture(sub {
         }
     ) >> 8;
 });
-is_deeply(
+eq_or_diff(
     [$status, $stderr, $stdout],
     [0,       '',      "starting\nslept\n"],
     "correct status and output when there's no timeout"
@@ -43,7 +44,7 @@ is_deeply(
         }
     ) >> 8;
 });
-is_deeply(
+eq_or_diff(
     [$status, $stderr,       $stdout],
     [124,     "timed out\n", "starting\n"],
     "correct status and output when there's a timeout"
@@ -58,7 +59,7 @@ is_deeply(
         }
     ) >> 8;
 });
-is_deeply(
+eq_or_diff(
     [$status, $stderr, $stdout],
     [3,       '',      "starting\n"],
     "correct status and output when there's a funky exit status and no timeout"
