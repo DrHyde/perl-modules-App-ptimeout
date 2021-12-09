@@ -41,3 +41,5 @@ Makefile.PL
 ARTISTIC.txt
 GPL2.txt
 bin/ptimeout
+CHANGELOG
+MANIFEST.SKIP
