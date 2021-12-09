@@ -2,6 +2,7 @@ package App::ptimeout;
 
 use strict;
 use warnings;
+no warnings 'numeric';
 
 use Proc::Killfam;
 
@@ -9,6 +10,9 @@ our $VERSION = '1.0.0';
 
 sub _run {
     my($timeout, @argv) = @_;
+
+    if($timeout =~ /m$/) { $timeout *= 60 }
+     elsif($timeout =~ /h$/) { $timeout *= 3600 }
 
     my $pid = fork();
     if(!defined($pid)) {
