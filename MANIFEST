@@ -40,3 +40,4 @@ lib/App/ptimeout.pm
 Makefile.PL
 ARTISTIC.txt
 GPL2.txt
+bin/ptimeout
