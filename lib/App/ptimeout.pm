@@ -6,7 +6,7 @@ no warnings 'numeric';
 
 use Proc::Killfam;
 
-our $VERSION = '1.0.0';
+our $VERSION = '1.0.1';
 
 sub _run {
     my($timeout, @argv) = @_;

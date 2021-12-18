@@ -1,3 +1,7 @@
+1.0.1   2021-12-18
+
+- Make tests more reliable under heavy load
+
 1.0.0  2021-12-09
 
 - Initial release
