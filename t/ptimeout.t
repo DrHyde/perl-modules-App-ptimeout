@@ -33,7 +33,7 @@ eq_or_diff(
 );
 
 ($stdout, $stderr, $status) = capture(sub {
-    system(
+    my $status = system(
         @perl,
         1,
         q{
@@ -43,6 +43,10 @@ eq_or_diff(
             "
         }
     ) >> 8;
+    # keep capturing output until the sub-process would have finished
+    # were it not killed
+    sleep 15;
+    $status;
 });
 eq_or_diff(
     [$status, $stderr,       $stdout],
