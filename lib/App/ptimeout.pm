@@ -8,7 +8,7 @@ use Fcntl qw(F_GETFL F_SETFL O_NONBLOCK);
 use POSIX qw(WNOHANG);
 use Proc::ProcessTable;
 
-our $VERSION = '1.0.2';
+our $VERSION = '1.0.3';
 
 sub _run {
     my($timeout, @argv) = @_;
@@ -240,7 +240,7 @@ App::ptimeout - module implementing L<ptimeout>
 
 =head1 AUTHOR, COPYRIGHT and LICENCE
 
-Copyright 2023 David Cantrell E<lt>F<david@cantrell.org.uk>E<gt>
+Copyright 2026 David Cantrell E<lt>F<david@cantrell.org.uk>E<gt>
 
 This software is free-as-in-speech software, and may be used,
 distributed, and modified under the terms of either the GNU
