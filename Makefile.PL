@@ -3,8 +3,10 @@ use lib qw(inc); use Devel::AssertOS qw(Unix);
 use ExtUtils::MakeMaker;
 WriteMakefile(
     NAME => 'App::ptimeout',
-    META_MERGE => {
+    META_ADD => {
         license => 'open_source',
+},
+META_MERGE => {
         resources => {
             repository => 'https://github.com/DrHyde/perl-modules-App-ptimeout',
             bugtracker => 'https://github.com/DrHyde/perl-modules-App-ptimeout/issues'
